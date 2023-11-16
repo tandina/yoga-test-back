@@ -1,0 +1,59 @@
+-------------------------------------------------------------------------------
+Test set: com.openclassrooms.starterjwt.repository.SessionRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.922 s <<< FAILURE! - in com.openclassrooms.starterjwt.repository.SessionRepositoryTest
+SessionRepositoryGetAllSessions  Time elapsed: 0.032 s  <<< ERROR!
+javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryGetAllSessions(SessionRepositoryTest.java:64)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryGetAllSessions(SessionRepositoryTest.java:64)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "TEACHERS" non trouvée
+Table "TEACHERS" not found; SQL statement:
+insert into TEACHERS (created_at, first_name, last_name, updated_at) values (?, ?, ?, ?) [42102-200]
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryGetAllSessions(SessionRepositoryTest.java:64)
+
+SessionRepositoryGetSessionsById  Time elapsed: 0.007 s  <<< ERROR!
+javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryGetSessionsById(SessionRepositoryTest.java:103)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryGetSessionsById(SessionRepositoryTest.java:103)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "TEACHERS" non trouvée
+Table "TEACHERS" not found; SQL statement:
+insert into TEACHERS (created_at, first_name, last_name, updated_at) values (?, ?, ?, ?) [42102-200]
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryGetSessionsById(SessionRepositoryTest.java:103)
+
+SessionRepositoryUpdateSession  Time elapsed: 0.019 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into SESSIONS (created_at, date, description, name, teacher_id, updated_at) values (?, ?, ?, ?, ?, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryUpdateSession(SessionRepositoryTest.java:139)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryUpdateSession(SessionRepositoryTest.java:139)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "SESSIONS" non trouvée
+Table "SESSIONS" not found; SQL statement:
+insert into SESSIONS (created_at, date, description, name, teacher_id, updated_at) values (?, ?, ?, ?, ?, ?) [42102-200]
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryUpdateSession(SessionRepositoryTest.java:139)
+
+SessionRepositoryDeleteSession  Time elapsed: 0.006 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into SESSIONS (created_at, date, description, name, teacher_id, updated_at) values (?, ?, ?, ?, ?, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryDeleteSession(SessionRepositoryTest.java:161)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryDeleteSession(SessionRepositoryTest.java:161)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "SESSIONS" non trouvée
+Table "SESSIONS" not found; SQL statement:
+insert into SESSIONS (created_at, date, description, name, teacher_id, updated_at) values (?, ?, ?, ?, ?, ?) [42102-200]
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositoryDeleteSession(SessionRepositoryTest.java:161)
+
+SessionRepositorySaveOneSession  Time elapsed: 0.006 s  <<< ERROR!
+javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositorySaveOneSession(SessionRepositoryTest.java:35)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositorySaveOneSession(SessionRepositoryTest.java:35)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "TEACHERS" non trouvée
+Table "TEACHERS" not found; SQL statement:
+insert into TEACHERS (created_at, first_name, last_name, updated_at) values (?, ?, ?, ?) [42102-200]
+	at com.openclassrooms.starterjwt.repository.SessionRepositoryTest.SessionRepositorySaveOneSession(SessionRepositoryTest.java:35)
+
